@@ -1,6 +1,6 @@
 from crawl4ai import AsyncWebCrawler
 from crawl4ai.async_configs import CrawlerRunConfig
-from utils.scraper_utils import get_browser_config
+from app.utils.scraper_utils import get_browser_config
 
 async def scrape(url: str):
     browser_config = get_browser_config()
