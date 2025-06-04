@@ -9,8 +9,7 @@ app = FastAPI()
 
 @app.get("/scrape")
 async def scrape_url(url: HttpUrl = Query(..., description="URL to scrape")):
-    result = asyncio.run(scrape(url))
-    result = await scrape("https://www.google.com/search?q=bellyful+restaurant+sambalpur")
+    result = await scrape(str(url))
     if result is None:
         raise HTTPException(status_code=500, detail="Failed to scrape URL")
     return JSONResponse(content=result.get("external",[]), status_code=200)
