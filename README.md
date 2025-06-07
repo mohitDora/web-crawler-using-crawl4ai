@@ -22,7 +22,7 @@ This project is a web scraping API built with FastAPI, leveraging [Crawl4AI](htt
    docker run -p 8000:8000 fastapi-crawler
    ```
 3. **Access the API:**
-   - Open [http://localhost:8000/docs](http://localhost:8000/docs) for the interactive Swagger UI.
+   Open [http://localhost:8000/docs](http://localhost:8000/docs) for the interactive Swagger UI.
 
 ## Local Development (without Docker)
 
@@ -79,6 +79,3 @@ Dockerfile           # Container setup
 ## Notes
 - The crawler uses Chromium in headless mode with a random user agent.
 - Playwright browser dependencies are installed automatically in Docker and local setup.
-
-## License
-MIT 
